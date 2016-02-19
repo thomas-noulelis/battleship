@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>BATTLESHIP API</h1>
+
+    <h2>How to use?</h2>
+
+    Proceed by URL typing.
+    <br>
+
+    <h3>Get list of all ships</h3>
+
+    <p>Go to url api/ship</p>
+    <br>
+
+    <h3>Get list of all countries</h3>
+
+    <p>Go to url api/country</p>
+    <br>
+
+    <h3>Get a country</h3>
+
+    <p>Go to url api/country/<em>{name of the country}</em></p>
+    <br>
+
+    <h3>Get a Ship</h3>
+
+    <p>Go to url api/ship/<em>{genre of the ship - example : ...api/ship/destroyer}</em></p>
+    <br>
+    <br>
+
+    <h1>IMPORT DATABASE</h1>
+
+    <p>Create a new database named 'battleship' and import the file 'battleship.sql' located in root of the project.  </p>
+
+
+{% endblock %}
