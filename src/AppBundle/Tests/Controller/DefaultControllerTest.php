@@ -6,6 +6,14 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class DefaultControllerTest extends WebTestCase
 {
+    public function setUP(){
+      require_once 'DefaultController.php';
+    }
+
+    public function testIndexAction(){
+        $test = array
+    }
+
     public function testIndex()
     {
         $client = static::createClient();
