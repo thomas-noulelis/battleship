@@ -11,8 +11,18 @@ class DefaultControllerTest extends WebTestCase
     }
 
     public function testIndexAction(){
-        $test = array
+        $test = array();
+        $this->assertEquals(0,count($test));
+
+        array_push($test, 'foo');
+        $this->assertEquals('foo', $test[count($test)-1]);
+        $this->assertEquals(1, count($test));
+
+        $this->assertEquals('foo',array_pop($test));
+        $this->assertEquals(0, count($test));
     }
+
+    public function testStrikeAction(){
 
     public function testIndex()
     {
