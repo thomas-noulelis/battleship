@@ -17,9 +17,9 @@ class ApiController extends Controller
 {
 
     /**
-     * @Route("/", name="battleship")
+     * @Route("/", name="api")
      */
-    public function battleshipAction(Request $request)
+    public function battleshipAction()
     {
         // replace this example code with whatever you need
         return $this->render('battleship/battleship.html.twig', array(
@@ -28,14 +28,11 @@ class ApiController extends Controller
     }
 
 
-
-
-
     /**
      * @Route("/country/", name="countries")
      * @Method({"GET"})
      */
-    public function listCountriesAction(Request $request)
+    public function listCountriesAction()
     {
 
         $em = $this->getDoctrine()->getManager();
@@ -50,7 +47,7 @@ class ApiController extends Controller
      * @Route("/country/{idcountry}/", name="country")
      * @Method({"GET"})
      */
-    public function getCountryAction(Request $request, $idcountry)
+    public function getCountryAction($idcountry)
     {
 
         $em = $this->getDoctrine()->getManager();
@@ -65,7 +62,7 @@ class ApiController extends Controller
      * @Route("/country/{idcountry}/ship/", name="countryship")
      * @Method({"GET"})
      */
-    public function getCountryShipAction(Request $request, $idcountry)
+    public function getCountryShipAction($idcountry)
     {
 
         $em = $this->getDoctrine()->getManager();
@@ -78,7 +75,7 @@ class ApiController extends Controller
      * @Route("/country/{idcountry}/ship/ext/", name="countryship_ext")
      * @Method({"GET"})
      */
-    public function getCountryShipExtAction(Request $request, $idcountry)
+    public function getCountryShipExtAction($idcountry)
     {
 
         $em = $this->getDoctrine()->getManager();
@@ -90,12 +87,11 @@ class ApiController extends Controller
 
 
 
-
     /**
      * @Route("/ship/", name="ships")
      * @Method({"GET"})
      */
-    public function listShipAction(Request $request)
+    public function listShipAction()
     {
 
         $em = $this->getDoctrine()->getManager();
@@ -105,34 +101,61 @@ class ApiController extends Controller
         return new JsonResponse($response);
     }
     /**
-     * @Route("/ship/{ship}/", name="ship")
+     * @Route("/ship/{typeofship}/", name="typeofship")
      * @Method({"GET"})
      */
-    public function getShipAction(Request $request, $ship)
+    public function getTypeOfShipAction($typeofship)
     {
 
         $em = $this->getDoctrine()->getManager();
 
-        $response = $em->getRepository('AppBundle:Apiship')->getShip($ship);
+        $response = $em->getRepository('AppBundle:Apiship')->getTypeOfShip($typeofship);
 
         return new JsonResponse($response);
     }
+    /**
+     * @Route("/ship={oneship}/", name="oneship")
+     * @Method({"GET"})
+     */
+    public function getOneShipAction($oneship)
+    {
 
+        $em = $this->getDoctrine()->getManager();
 
+        $response = $em->getRepository('AppBundle:Apiship')->getOneShip($oneship);
+
+        return new JsonResponse($response);
+    }
 
 
     /**
      * @Route("/all", name="all")
      * @Method({"GET"})
      */
-    public function getAllAction(Request $request)
+    public function getAllAction()
     {
 
         $em = $this->getDoctrine()->getManager();
 
         $response = $em->getRepository('AppBundle:Apicountry')->getAll();
 
-        return new JsonResponse(dump($response));
+        return new JsonResponse($response);
+    }
+
+
+    /**
+     * @Route("/test", name="test")
+     * @Method({"GET"})
+     */
+    public function testAction()
+    {
+
+        $em = $this->getDoctrine()->getManager();
+
+        $response = $em->getRepository('AppBundle:Apiship')->test();
+
+        return new JsonResponse($response);
+
     }
 
 }

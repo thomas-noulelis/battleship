@@ -20,7 +20,7 @@ class ApishipRepository extends EntityRepository
 
     }
     // get ship by type
-    public function getShip($ship)
+    public function getTypeOfShip($ship)
     {
 
         $em = $this->getEntityManager();
@@ -28,6 +28,33 @@ class ApishipRepository extends EntityRepository
         $query = $em
             ->createQuery('SELECT g FROM AppBundle:Apiship g WHERE g.type = :type')
             ->setParameter('type', $ship);
+
+        return $query->getArrayResult();
+
+    }
+
+    // get one ship
+    public function getOneShip($oneship)
+    {
+
+        $em = $this->getEntityManager();
+
+        $query = $em
+            ->createQuery('SELECT o FROM AppBundle:Apiship o WHERE o.name = :name')
+            ->setParameter('name', $oneship);
+
+        return $query->getArrayResult();
+
+    }
+
+    // test
+    public function test()
+    {
+
+        $em = $this->getEntityManager();
+
+        $query = $em
+            ->createQuery("SELECT s.name FROM AppBundle:Apiship s WHERE s.type = 'destroyer'");
 
         return $query->getArrayResult();
 

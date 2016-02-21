@@ -5,67 +5,93 @@
 
     <h2>How to use?</h2>
 
+    <table class="apitable apitable1" style="width:100%">
+        <tr>
+            <th><span style='color:orange;'>:: Proceed by URL typing in order to get the list of ::</span></th>
+        </tr>
+        <tr>
+            <td>
+                <h3>all ships classified by country</h3>
+                <p>.../api/all/</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>all ships</h3>
+                <p>.../api/ship</p>
+            </td>
+        </tr>
 
-    <h3>Current route :</h3>
-
-    <p>.../api</p>
-    <br><br>
-
-    <span style='color:orange;'>Proceed by URL typing in order to get the list of :</span>
-    <br>
-
-
-    <h3>all ships classified by country</h3>
-
-    <p>.../api/all/</p>
-    <br>
-
-
-    <h3>ships (all countries)</h3>
-
-    <p>.../api/ship</p>
-    <br>
-
-
-    <h3> all countries</h3>
-
-    <p>.../api/country</p>
-    <br>
-
-
-    <h3>selected type of ships</h3>
-
-    <p>.../api/ship/<em>{<b>type</b> of the ship - example : ...api/ship/destroyer}</em></p>
-    <br>
-
-
-    <h3>ships of a selected country</h3>
-
-    <p>.../api/country/<em>{<b>id</b> of the country}</em>/ship/<em></p>
-    <br><br>
-
-
-
-    <span style='color:orange;'>-To get singular result ::</span>
-
-    <h3>selected country</h3>
-
-    <p>.../api/country/<em>{<b>id</b> of the country}</em></p>
-    <br>
+        <tr>
+            <td>
+                <h3> all countries</h3>
+                <p>.../api/country</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>selected type of ships</h3>
+                <p>.../api/ship/<em>{<b>type</b> of the ship - example : ...api/ship/destroyer}</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>ships of a selected country</h3>
+                <p>.../api/country/<em>{<b>id</b> of the country}</em>/ship/</p>
+            </td>
+        </tr>
+    </table>
+    <table class="apitable" style="width:100%">
+        <tr>
+            <th>
+                <span style='color:orange;'>:: To get singular result ::</span>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <h3>selected country</h3>
+                <p>.../api/country/<em>{<b>id</b> of the country}</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>selected ship</h3>
+                <p>.../api/ship=<em>{<b>name</b> of the ship}</em></p>
+            </td>
+        </tr>
 
 
-    <h3>selected ship</h3>
-
-    <p>.../api/country/<em>{<b>name</b> of the ship}</em></p>
-    <br>
+    </table>
 
 
 
-    <br>
+
+    <br><br><br>
 
     <h1>:: IMPORT DATABASE ::</h1>
 
     <p>Create a new database named 'battleship' and import the file 'battleship.sql' located in root of the project.  </p>
+    <br><br>
+    <a href="{{ path('homepage')}}">Go back to game</a><br><br><br>
 
 
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        body { background: #F5F5F5; font: 18px/1.5 sans-serif; text-align: center;}
+        p { margin: 0 0 1em 0; }
+        table.apitable {margin: 0 auto; margin-top:120px; border-collapse: collapse; width: 80% !important; text-align: center;  padding-bottom: 20px;}
+        table.apitable1 {margin-top:80px;}
+        table.apitable td {width: 30px; text-align: center;}
+        table.apitable th {padding:0px;}
+        a {font-weight: bold; color:orange;}
+        table tr {background: white;}
+        table.apitable, table.apitable1 {max-width: 800px; width: 95%; }
+        table tr:nth-child(even) { width: 80vw; min-height: 80px; background-color: rgba(255,170,0,0.1);}
+
+        @media (max-width: 768px) {
+            table.apitable, table.apitable1 {  width: 95% !important; }
+        }
+    </style>
 {% endblock %}
