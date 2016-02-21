@@ -24,9 +24,16 @@ class Apiship
     /**
      * @var string
      *
-     * @ORM\Column(name="ship", type="string", length=255, nullable=false)
+     * @ORM\Column(name="type", type="string", length=255, nullable=false)
      */
-    private $ship;
+    private $type;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255, nullable=false)
+     */
+    private $name;
 
     /**
      * @var integer
@@ -38,16 +45,9 @@ class Apiship
     /**
      * @var integer
      *
-     * @ORM\Column(name="radius_attack", type="integer", nullable=false)
+     * @ORM\Column(name="idcountry", type="integer", nullable=false)
      */
-    private $radiusAttack;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="country", type="integer", nullable=false)
-     */
-    private $country;
+    private $idcountry;
 
 
 }

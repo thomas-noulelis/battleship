@@ -1,7 +1,7 @@
 AppBundle\Entity\Apicountry:
     type: entity
     table: apiCountry
-    repositoryClass: AppBundle\Repository\CountryRepository
+    repositoryClass: AppBundle\Repository\ApicountryRepository
     id:
         id:
             type: integer

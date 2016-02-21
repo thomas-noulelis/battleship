@@ -7,7 +7,7 @@ use Doctrine\ORM\EntityRepository;
 class ApishipRepository extends EntityRepository
 {
 
-
+    // get all ships
     public function getAllShips()
     {
 
@@ -19,15 +19,15 @@ class ApishipRepository extends EntityRepository
         return $query->getArrayResult();
 
     }
-
+    // get ship by type
     public function getShip($ship)
     {
 
         $em = $this->getEntityManager();
 
         $query = $em
-            ->createQuery('SELECT g FROM AppBundle:Apiship g WHERE g.ship = :genre')
-            ->setParameter('genre', $ship);
+            ->createQuery('SELECT g FROM AppBundle:Apiship g WHERE g.type = :type')
+            ->setParameter('type', $ship);
 
         return $query->getArrayResult();
 

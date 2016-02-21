@@ -24,9 +24,16 @@ class Apiship
     /**
      * @var string
      *
-     * @ORM\Column(name="ship", type="string", length=255, nullable=false)
+     * @ORM\Column(name="type", type="string", length=255, nullable=false)
      */
-    private $ship;
+    private $type;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255, nullable=false)
+     */
+    private $name;
 
     /**
      * @var integer
@@ -38,16 +45,9 @@ class Apiship
     /**
      * @var integer
      *
-     * @ORM\Column(name="radius_attack", type="integer", nullable=false)
+     * @ORM\Column(name="idcountry", type="integer", nullable=false)
      */
-    private $radiusAttack;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="country", type="integer", nullable=false)
-     */
-    private $country;
+    private $idcountry;
 
 
 
@@ -62,27 +62,51 @@ class Apiship
     }
 
     /**
-     * Set ship
+     * Set type
      *
-     * @param string $ship
+     * @param string $type
      *
      * @return Apiship
      */
-    public function setShip($ship)
+    public function setType($type)
     {
-        $this->ship = $ship;
+        $this->type = $type;
 
         return $this;
     }
 
     /**
-     * Get ship
+     * Get type
      *
      * @return string
      */
-    public function getShip()
+    public function getType()
     {
-        return $this->ship;
+        return $this->type;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Apiship
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 
     /**
@@ -110,50 +134,26 @@ class Apiship
     }
 
     /**
-     * Set radiusAttack
+     * Set idcountry
      *
-     * @param integer $radiusAttack
+     * @param integer $idcountry
      *
      * @return Apiship
      */
-    public function setRadiusAttack($radiusAttack)
+    public function setIdcountry($idcountry)
     {
-        $this->radiusAttack = $radiusAttack;
+        $this->idcountry = $idcountry;
 
         return $this;
     }
 
     /**
-     * Get radiusAttack
+     * Get idcountry
      *
      * @return integer
      */
-    public function getRadiusAttack()
+    public function getIdcountry()
     {
-        return $this->radiusAttack;
-    }
-
-    /**
-     * Set country
-     *
-     * @param integer $country
-     *
-     * @return Apiship
-     */
-    public function setCountry($country)
-    {
-        $this->country = $country;
-
-        return $this;
-    }
-
-    /**
-     * Get country
-     *
-     * @return integer
-     */
-    public function getCountry()
-    {
-        return $this->country;
+        return $this->idcountry;
     }
 }

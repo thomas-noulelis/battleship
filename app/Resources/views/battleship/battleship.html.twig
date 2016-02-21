@@ -1,35 +1,69 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>BATTLESHIP API</h1>
+    <h1>:: BATTLESHIP API ::</h1>
 
     <h2>How to use?</h2>
 
-    Proceed by URL typing.
+
+    <h3>Current route :</h3>
+
+    <p>.../api</p>
+    <br><br>
+
+    <span style='color:orange;'>Proceed by URL typing in order to get the list of :</span>
     <br>
 
-    <h3>Get list of all ships</h3>
 
-    <p>Go to url api/ship</p>
+    <h3>all ships classified by country</h3>
+
+    <p>.../api/all/</p>
     <br>
 
-    <h3>Get list of all countries</h3>
 
-    <p>Go to url api/country</p>
+    <h3>ships (all countries)</h3>
+
+    <p>.../api/ship</p>
     <br>
 
-    <h3>Get a country</h3>
 
-    <p>Go to url api/country/<em>{name of the country}</em></p>
+    <h3> all countries</h3>
+
+    <p>.../api/country</p>
     <br>
 
-    <h3>Get a Ship</h3>
 
-    <p>Go to url api/ship/<em>{genre of the ship - example : ...api/ship/destroyer}</em></p>
-    <br>
+    <h3>selected type of ships</h3>
+
+    <p>.../api/ship/<em>{<b>type</b> of the ship - example : ...api/ship/destroyer}</em></p>
     <br>
 
-    <h1>IMPORT DATABASE</h1>
+
+    <h3>ships of a selected country</h3>
+
+    <p>.../api/country/<em>{<b>id</b> of the country}</em>/ship/<em></p>
+    <br><br>
+
+
+
+    <span style='color:orange;'>-To get singular result ::</span>
+
+    <h3>selected country</h3>
+
+    <p>.../api/country/<em>{<b>id</b> of the country}</em></p>
+    <br>
+
+
+    <h3>selected ship</h3>
+
+    <p>.../api/country/<em>{<b>name</b> of the ship}</em></p>
+    <br>
+
+
+
+    <br>
+
+    <h1>:: IMPORT DATABASE ::</h1>
 
     <p>Create a new database named 'battleship' and import the file 'battleship.sql' located in root of the project.  </p>
 

@@ -12,7 +12,13 @@ AppBundle\Entity\Apiship:
             generator:
                 strategy: IDENTITY
     fields:
-        ship:
+        type:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        name:
             type: string
             nullable: false
             length: 255
@@ -23,13 +29,7 @@ AppBundle\Entity\Apiship:
             nullable: false
             options:
                 unsigned: false
-        radiusAttack:
-            type: integer
-            nullable: false
-            options:
-                unsigned: false
-            column: radius_attack
-        country:
+        idcountry:
             type: integer
             nullable: false
             options:

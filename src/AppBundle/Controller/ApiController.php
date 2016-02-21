@@ -29,6 +29,8 @@ class ApiController extends Controller
 
 
 
+
+
     /**
      * @Route("/country/", name="countries")
      * @Method({"GET"})
@@ -45,18 +47,47 @@ class ApiController extends Controller
 
     }
     /**
-     * @Route("/country/{country}/", name="country")
+     * @Route("/country/{idcountry}/", name="country")
      * @Method({"GET"})
      */
-    public function getCountryAction(Request $request, $country)
+    public function getCountryAction(Request $request, $idcountry)
     {
 
         $em = $this->getDoctrine()->getManager();
 
-        $response = $em->getRepository('AppBundle:Apicountry')->getCountry($country);
+        $response = $em->getRepository('AppBundle:Apicountry')->getCountry($idcountry);
 
         return new JsonResponse($response);
     }
+
+
+    /**
+     * @Route("/country/{idcountry}/ship/", name="countryship")
+     * @Method({"GET"})
+     */
+    public function getCountryShipAction(Request $request, $idcountry)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+
+        $response = $em->getRepository('AppBundle:Apicountry')->getCountryShip($idcountry);
+
+        return new JsonResponse($response);
+    }
+    /**
+     * @Route("/country/{idcountry}/ship/ext/", name="countryship_ext")
+     * @Method({"GET"})
+     */
+    public function getCountryShipExtAction(Request $request, $idcountry)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+
+        $response = $em->getRepository('AppBundle:Apicountry')->getCountryShipExt($idcountry);
+
+        return new JsonResponse($response);
+    }
+
 
 
 
@@ -87,5 +118,21 @@ class ApiController extends Controller
         return new JsonResponse($response);
     }
 
+
+
+
+    /**
+     * @Route("/all", name="all")
+     * @Method({"GET"})
+     */
+    public function getAllAction(Request $request)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+
+        $response = $em->getRepository('AppBundle:Apicountry')->getAll();
+
+        return new JsonResponse(dump($response));
+    }
 
 }
