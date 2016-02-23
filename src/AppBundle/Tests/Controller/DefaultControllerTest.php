@@ -3,12 +3,14 @@
 namespace AppBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use AppBundle\Controller\DefaultController;
+
 
 class DefaultControllerTest extends WebTestCase
 {
-    public function setUP(){
-      require_once 'DefaultController.php';
-    }
+    //public function setUP(){
+    //  require_once 'DefaultController.php';
+    //}
 
     public function testIndexAction(){
         $test = array();
@@ -23,6 +25,16 @@ class DefaultControllerTest extends WebTestCase
     }
 
     public function testStrikeAction(){
+
+    }
+
+    public function testCheckCoordinates(){
+
+    }
+
+    public function testOutputGrid(){
+
+    }
 
     public function testIndex()
     {
