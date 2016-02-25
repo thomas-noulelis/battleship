@@ -25,17 +25,20 @@ class DefaultControllerTest extends PHPUnit_Framework_TestCase
     }
 
     public function testStrikeAction(){
-
         $test = array();
         $this->assertEquals(0,count($test));
     }
 
-    public function testCheckCoordinates(){
+    public function testCheckCoordinates(array $test){
+        array_push($test, 'foo');
+        $this->assertEquals('foo', $test[count($test)-1]);
+        $this->assertNotEmpty($test);
 
     }
 
-    public function testOutputGrid(){
-
+    public function testOutputGrid(array $test){
+       $this->assertEquals('foo', array_pop($test));
+       $this->assertEmpty($test);
     }
 
     public function testIndex()
