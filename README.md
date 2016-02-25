@@ -2,11 +2,11 @@ Pojet 2ème trimestre  H3 PHP/Symfony
 ==============
 
 Equipe n°13:
-	-CHEN Weisun
-	-NOULELIS Thomas
-	-SAKAMESSO Moïse
-	-SOUM Matthieu
-	-VAUBOURG Thibaud
+	- CHEN Weisun
+	- NOULELIS Thomas
+	- SAKAMESSO Moïse
+	- SOUM Matthieu
+	- VAUBOURG Thibaud
 
 Sujet: 
 
