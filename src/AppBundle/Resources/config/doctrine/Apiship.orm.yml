@@ -1,0 +1,37 @@
+AppBundle\Entity\Apiship:
+    type: entity
+    table: apiShip
+    repositoryClass: AppBundle\Repository\ApishipRepository
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        type:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        name:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        size:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        idcountry:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+    lifecycleCallbacks: {  }

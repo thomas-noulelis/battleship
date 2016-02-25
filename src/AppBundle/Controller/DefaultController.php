@@ -6,7 +6,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-
+use Symfony\Component\HttpFoundation\JsonResponse;
 use AppBundle\Factory\ShipFactory;
 
 class DefaultController extends Controller
@@ -32,13 +32,15 @@ class DefaultController extends Controller
      * @Route("/", name="homepage")
      * @Method({"GET"})
      */
-    public function indexAction(Request $request)
+    public function indexAction()
     {
 
         $shipsList = array(
-            ShipFactory::create('Battleship'),
+            ShipFactory::create('AircraftCarrier'),
+            ShipFactory::create('Cruiser'),
             ShipFactory::create('Destroyer'),
-            ShipFactory::create('Destroyer'),
+            ShipFactory::create('Submarine'),
+            ShipFactory::create('PatrolBoat')
         );
 
         $ships = [];
@@ -123,14 +125,14 @@ class DefaultController extends Controller
         if (!$this->isValidCoord($coordinates)) {
             return  'Error: Please enter a valid coordinate';
         } else {
-            if ($this->getSuccessHits() == 13) {
+            if ($this->getSuccessHits() == 17) {
                 return 'You won! It took you '.$this->getAttempts().' turns to win.  Refresh the page to start a new game.';
             } else {
                 $converted_coord = $this->convertCoord($coordinates);
                 $hit = $this->checkHit($converted_coord);
                 if ($hit) {
                     $this->addHits($converted_coord);
-                    if ($this->getSuccessHits() == 13) {
+                    if ($this->getSuccessHits() == 17) {
                         return 'You won! It took you '.$this->getAttempts().' turns to win.  Refresh the page to start a new game.';
                     }
                     if ($this->checkSunkShip($converted_coord)) {

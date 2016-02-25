@@ -3,13 +3,13 @@
 namespace AppBundle\Entity;
 
 /**
- *  Destroyer
+ *  AircraftCarrier
  */
-class Destroyer extends Ship
+class AircraftCarrier extends Ship
 {
 
-    const SPACES = 3;
-    const TYPE = "Destroyer";
+    const SPACES = 5;
+    const TYPE = "AircraftCarrier";
 
     public function __construct() {
         parent::__construct(self::SPACES, self::TYPE);
