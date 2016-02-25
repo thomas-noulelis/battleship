@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use AppBundle\Controller\DefaultController;
 
 
-class DefaultControllerTest extends WebTestCase
+class DefaultControllerTest extends PHPUnit_Framework_TestCase
 {
     //public function setUP(){
     //  require_once 'DefaultController.php';
@@ -26,6 +26,8 @@ class DefaultControllerTest extends WebTestCase
 
     public function testStrikeAction(){
 
+        $test = array();
+        $this->assertEquals(0,count($test));
     }
 
     public function testCheckCoordinates(){
