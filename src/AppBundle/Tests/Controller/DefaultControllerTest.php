@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use AppBundle\Controller\DefaultController;
 
 
-class DefaultControllerTest extends PHPUnit_Framework_TestCase
+class DefaultControllerTest extends WebTestCase
 {
     //public function setUP(){
     //  require_once 'DefaultController.php';
@@ -38,7 +38,7 @@ class DefaultControllerTest extends PHPUnit_Framework_TestCase
 
     public function testOutputGrid(array $test){
        $this->assertEquals('foo', array_pop($test));
-       $this->assertEmpty($test);
+       $this->assertEmpty($);
     }
 
     public function testIndex()
