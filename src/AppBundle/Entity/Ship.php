@@ -7,11 +7,25 @@ namespace AppBundle\Entity;
  */
 abstract class Ship
 {
-
+    /**
+     * @var int
+     *
+     * @ORM\Column(type="integer", length=2)
+     */
     protected $length;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", length=20)
+     */
     protected $name;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", length=20)
+     */
     protected $coordinates;
 
     public function __construct($length, $name) {

@@ -3,30 +3,24 @@
 namespace AppBundle\Entity;
 
 /**
- *  Destroyer
+ *  Battleship
  */
-class Destroyer extends Ship
+class Battleship extends Ship
 {
-<<<<<<< HEAD
-
-    const SPACES = 3;
-    const TYPE = "Destroyer";
-=======
     /**
      * @var int
      *
      * @ORM\Column(type="integer", length=2)
      */
-    const SPACES = 4;
+    const SPACES = 5;
     /**
      * @var string
      *
      * @ORM\Column(type="string", length=20)
      */
-    const NAME = "Destroyer";
->>>>>>> refs/remotes/origin/PHPUnit
+    const NAME = "Battleship";
 
     public function __construct() {
-        parent::__construct(self::SPACES, self::TYPE);
+        parent::__construct(self::SPACES, self::NAME);
     }
 }

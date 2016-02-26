@@ -82,7 +82,6 @@ class DefaultController extends Controller
      */
     public function strikeAction(Request $request)
     {
-
         $curr_board = json_decode($_COOKIE['battleship'], true);
         $ships = $curr_board['ships'];
         $hits = $curr_board['hits'];
