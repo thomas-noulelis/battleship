@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="916fa477-f0b6-4b4a-b321-9943ade8f315" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/battleship/battleship.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/battleship/battleship.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ApiController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ApiController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Repository/ApicountryRepository.php" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/ApicountryRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/FormController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/FormController.php" />
     </list>
     <ignored path="djmosmo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,14 +42,14 @@
       <file leaf-file-name="FormController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/FormController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.719697">
-              <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.59632033">
+              <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
               <folding>
                 <element signature="e#38#83#0#PHP" expanded="true" />
-                <element signature="e#1630#1660#0#PHP" expanded="true" />
-                <element signature="e#1918#1946#0#PHP" expanded="true" />
-                <marker date="1456460431285" expanded="true" signature="1565:1579" placeholder="..." />
-                <marker date="1456460431285" expanded="true" signature="1803:1813" placeholder="..." />
+                <element signature="e#1373#1403#0#PHP" expanded="true" />
+                <element signature="e#1661#1689#0#PHP" expanded="true" />
+                <marker date="1456473575437" expanded="true" signature="1308:1322" placeholder="..." />
+                <marker date="1456473575437" expanded="true" signature="1546:1556" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1033,14 +1027,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/FormController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.719697">
-          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.59632033">
+          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
           <folding>
             <element signature="e#38#83#0#PHP" expanded="true" />
-            <element signature="e#1630#1660#0#PHP" expanded="true" />
-            <element signature="e#1918#1946#0#PHP" expanded="true" />
-            <marker date="1456460431285" expanded="true" signature="1565:1579" placeholder="..." />
-            <marker date="1456460431285" expanded="true" signature="1803:1813" placeholder="..." />
+            <element signature="e#1373#1403#0#PHP" expanded="true" />
+            <element signature="e#1661#1689#0#PHP" expanded="true" />
+            <marker date="1456473575437" expanded="true" signature="1308:1322" placeholder="..." />
+            <marker date="1456473575437" expanded="true" signature="1546:1556" placeholder="..." />
           </folding>
         </state>
       </provider>

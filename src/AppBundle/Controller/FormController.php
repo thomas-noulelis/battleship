@@ -33,17 +33,10 @@ class FormController extends Controller
         $countries = Intl::getRegionBundle()->getCountryNames();
 
         $form = $this->createFormBuilder($fleet)
-            ->add('country','country')
+       
             ->add('cname', 'text', array('label' => ' '))
             ->add('save', 'submit', array('label' => 'Create Fleet'))
             ->getForm();
-
-        $builder->add('inStock', ChoiceType::class, array(
-            'choices' => array('In Stock' => true, 'Out of Stock' => false),
-            // always include this
-            'choices_as_values' => true,
-        ));
-
 
 
 
