@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>:: CREATE A NEW NAVAL FLEET ::</h1>
+
+    <h2>How to do?</h2>
+
+    <table class="apitable apitable1" style="width:100%">
+        <tr>
+            <th><span style='color:orange;'>:: Please fill out the entire form to create a new naval fleet ::</span></th>
+        </tr>
+        <tr>
+            <td>
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form(form, {'attr': {'novalidate': 'novalidate'}}) }}
+                {{ form_end(form) }}
+            </td>
+        </tr>
+    </table>
+
+
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        body { background: #F5F5F5; font: 18px/1.5 sans-serif; text-align: center;}
+        p { margin: 0 0 1em 0; }
+        table.apitable {margin: 0 auto; margin-top:120px; border-collapse: collapse; width: 80% !important; text-align: center;  padding-bottom: 20px;}
+        table.apitable1 {margin-top:80px;}
+        table.apitable td {width: 30px; text-align: center;}
+        table.apitable th {padding:0px;}
+        a {font-weight: bold; color:orange;}
+        table tr {background: white;}
+        table.apitable, table.apitable1 {max-width: 800px; width: 95%; }
+        table tr:nth-child(even) { width: 80vw; min-height: 80px; background-color: rgba(255,170,0,0.1);}
+
+        @media (max-width: 768px) {
+            table.apitable, table.apitable1 {  width: 95% !important; }
+        }
+    </style>
+{% endblock %}

@@ -60,6 +60,20 @@ class ApicountryRepository extends EntityRepository
 
      }
 
+    //list ships of selected country
+    public function getCountryShipId($idcountry)
+    {
+
+        $em = $this->getEntityManager();
+
+        $query = $em
+            ->createQuery("SELECT s.id FROM AppBundle:Apiship s WHERE s.idcountry = :id")
+            ->setParameter('id', $idcountry);
+
+        return $query->getArrayResult();
+
+    }
+
     //list ships of selected country+country
     public function getCountryShipExt($idcountry)
     {
