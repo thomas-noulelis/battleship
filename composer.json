@@ -18,7 +18,12 @@
         "sensio/distribution-bundle": "~4.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
+<<<<<<< HEAD
         "phpunit/phpunit": "4.8.*"
+=======
+        "phpunit/phpunit": "^4.8",
+        "symfony/intl": "^3.0"
+>>>>>>> Mosmo-API
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

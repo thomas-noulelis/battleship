@@ -121,6 +121,7 @@ class DefaultController extends Controller
      */
     public function checkCoordinates($coordinates)
     {
+
         if (!$this->isValidCoord($coordinates)) {
             return  'Error: Please enter a valid coordinate';
         } else {
@@ -135,7 +136,9 @@ class DefaultController extends Controller
                         return 'You won! It took you '.$this->getAttempts().' turns to win.  Refresh the page to start a new game.';
                     }
                     if ($this->checkSunkShip($converted_coord)) {
-                        return 'Congratulation! You have sunk a ship!';
+
+
+                        return 'Congratulation! You have sunk a ship !';
                     } else {
                         return 'Hit!';
                     }
@@ -281,7 +284,6 @@ class DefaultController extends Controller
 
         $ships = array();
         foreach ($this->ships as $ship) {
-
             array_push($ships, [
                 'name' => $ship->getName(),
                 'coordinates' => $ship->getCoordinates()
@@ -305,6 +307,7 @@ class DefaultController extends Controller
     {
         return $this->ships;
     }
+
 
     public function setShips($ships)
     {

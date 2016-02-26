@@ -17,12 +17,13 @@ class ApiController extends Controller
 {
 
     /**
-     * @Route("/", name="api")
+     * @Route("/", name="battleship")
+     * @Method({"GET"})
      */
     public function battleshipAction()
     {
-        // replace this example code with whatever you need
-        return $this->render('battleship/battleship.html.twig', array(
+        // API page
+            return $this->render('battleship/battleship.html.twig', array(
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ));
     }
@@ -81,6 +82,19 @@ class ApiController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $response = $em->getRepository('AppBundle:Apicountry')->getCountryShipExt($idcountry);
+
+        return new JsonResponse($response);
+    }
+    /**
+     * @Route("/country/{idcountry}/ship/id", name="countryshipid")
+     * @Method({"GET"})
+     */
+    public function getCountryShipIdAction($idcountry)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+
+        $response = $em->getRepository('AppBundle:Apicountry')->getCountryShipId($idcountry);
 
         return new JsonResponse($response);
     }
